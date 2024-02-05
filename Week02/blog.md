@@ -1,0 +1,3 @@
+Reaction to wireframing article:
+
+As someone who does UX/UI as a job, I found this article to be a good summary of why baby steps are an important and often overlooked part of the process.  Low fidelity and high fidelity wireframing is a great way to plan, organize, and model your ideas in a cost-effective and time-effective way.  It makes it easier to change up your desired product to make sure it reaches the right people in the right way.
