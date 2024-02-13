@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <!--<link rel="stylesheet" href="./style.css">-->
+        <title>Taste of Homes</title>
+        <head>
+            <fieldset>
+                <style type="text/css">
+                    * {
+                        color: darkred;
+                    }
+
+                    body {
+                        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        padding: 20px 50px 150px;
+                        font-size: 15px;
+                        text-align: center;
+                        background: rgba(200, 120, 0, 0.25);
+                    }
+            
+                    ul {
+                        display: inline;
+                        margin: 0;
+                        padding: 15px 4px 17px 0;
+                        list-style-type: none;
+                        box-shadow: 0 0 5px rgba(0,0,0,0.15);
+                    }
+            
+                    ul li {
+                        display: inline-block;
+                        position: relative;
+                        padding: 15px 10px;
+                        background: ivory;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                    }
+            
+                    ul li:hover {
+                        background: burlywood;
+                        color: #fff;
+                    }
+            
+                    ul li ul {
+                        padding: 0;
+                        position: absolute;
+                        top: 48px;
+                        left: 0px;
+                        width: 150px;
+                        box-shadow: none;
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.5s;
+                    }
+            
+                    ul li ul li {
+                        background: burlywood;
+                        color: #fff;
+                        display: block;
+                        text-shadow: 0 -1px 0 brown;
+                    }
+            
+                    ul li ul li:hover {
+                        background: darkred;
+                    }
+            
+                    ul li:hover ul {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    h1 {
+                        text-shadow: 3px 3px 20px chocolate;
+                        text-decoration: underline;
+                        text-emphasis: 10px 2px 2px;
+                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-size: xxx-large;
+                    }
+
+                    #steps {
+                        text-align: left;
+                    }
+
+                </style>
+        </head>
+        <br>
+        <body>
+            <h1>Taste of Homes</h1>
+            <form>
+                <label for="search"><h2>Looking for a recipe? Search for it here:</h2></label>
+                <input type="text" id="search" name="search" placeholder="ex: coconut chicken curry">
+                <input type="submit" value="Go">
+            </form>
+            <br>
+            <hr>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Recipes
+                    <ul>
+                        <li>Starts</li>
+                        <li>Shareables</li>
+                        <li>Supper</li>
+                        <li>Sweets</li>
+                        <li>Sips</li>
+                    </ul>
+                </li>
+                <li>Contact US</li>
+            </ul>
+            <br>
+            <br>
+            <img src="dumplings.jpg"
+            width="25%"
+            height="25%"/>
+            <h2>The (Kind Of) Easiest Homemade Dumplings</h2>
+            <h3>By Julie Huang</h3>
+            <p><i>Are you craving authentic Chinese dumplings, but don't want to spend hours making them? Follow this simple (ish) recipe to find out how to make and enjoy a classic dish without a ton of hassle.
+            <br/><br/>
+            My maternal grandmother was the one who first introduced me to making homemade dumplings. It's a tradition in many Chinese families to spend a day making dumplings with your loved ones while gossiping and chatting about life, since making dumplings can be a long process. I hope you find this recipe helpful and that you get to experience a bit of my childhood magic!</i></p>
+            <p><strong>This recipe makes approximately 50 dumplings.</strong></p>
+            <hr>
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 lb ground pork or chicken</li>
+                <li>1/2 lb napa cabbage, washed carefully</li>
+                <li>14 oz premade dumpling wrappers (you can also make your own if you'd like, but it will take significantly longer)</li>
+                <li>3 tbsp peeled and grated ginger</li>
+                <li>1/4 cup thinly chopped scallions</li>
+                <li>1/4 cup chopped cilantro</li>
+                <li>1 large egg</li>
+                <li>2 tbsp soy sauce</li>
+                <li>1 tbsp sesame oil</li>
+                <li>2 tsp salt</li>
+                <li>Optional add-ons:
+                    <ul>
+                        <li>1/4 cup grated carrots</li>
+                        <li>2 tsp black or white pepper</li>
+                        <li>1/4 cup minced shiitake mushrooms</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Instructions</h3>
+            <ol id="steps">
+                <li>Thinly chop your cabbage and place in a bowl. Sprinkle with the salt, toss, and let it sit for 10 minutes. This will draw out the water in the cabbage.</li>
+                <li>In the meantime, add your ground meat, grated ginger, grated carrots (if you want), minced mushrooms (if you want), sliced scallions, egg, soy sauce, sesame oil, and pepper (if you want) into a large bowl.</li>
+                <li>After the 10 minutes has passed, drain the water out of the bowl of cabbage. Squeeze remaining water out of the cabbage with your hands and place the dried cabbage into the bowl with the other ingredients.</li>
+                <li>Using your hands (recommended) or a rubber spatula, evenly combine all ingredients in the bowl.</li>
+                <li>Lay out a sheet of parchment paper or a tray, a small bowl of water, and damp paper towels onto your workspace. Open the package of dumpling wrappers and lay out a few onto your workspace for ease. Cover the remaining stack with damp paper towels to prevent them from drying out.</li>
+                <li>Begin by adding a teaspoon of meat mixture into the center of one wrapper. Dip your finger into the water and lightly trace the perimeter of your dumpling wrapper with your wet finger.</li>
+                <li>Fold the wrapper in half lengthwise and pinch the ends closed to seal the dumpling and place it on your parchment paper or tray. Repeat steps 6-7 until your meat mixture runs out, continuing to cover your remaning stack of wrappers with damp paper towels.</li>
+                <li>Once all your dumplings have been made, boil a quart of water in a pot. Add in a few dumplings at a time, removing them once they float to the surface and their wrapper appears slightly translucent.</li>
+                <li>If desired, you can pan-fry your dumplings in a skillet with 2 tablespoons of oil. Flip when one side has been slightly browned, and continue this process with as many dumplings as you like.</li>
+                <li>To make optional dumpling sauce, combine 1/4 cup soy sauce, 3 tablespoons vinegar, 1 teaspoon sesame oil, 1/2 teaspoon brown sugar, and a pinch of minced ginger.</li>
+            </ol>
+
+            <h4>Enjoy your homemade dumplings! To store, you can put leftovers in an air-tight container in the fridge for up to 5 days. You may also freeze dumplings for up to 6 months!</h4>
+        </body>
+</html>
