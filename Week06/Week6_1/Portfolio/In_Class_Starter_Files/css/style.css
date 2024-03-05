@@ -78,7 +78,7 @@ img {
     margin: 24px auto;
  }
 
- /* Prepare our iitial state for image transforms */
+ /* Prepare our initial state for image transforms */
 .thumb img {
     transform: scale(1);
     transform: rotate(0deg);

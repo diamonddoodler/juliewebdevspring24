@@ -1,6 +1,5 @@
 /* Global Styles */
 * {
-<<<<<<< HEAD
     box-sizing: border-box;
 }
 
@@ -76,8 +75,7 @@ header a {
     flex: 0 0 23%;
     /* width: 23% */
     margin: 2rem auto;
-=======
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -147,14 +145,12 @@ header a {
 
 .thumb {
   flex: 0 0 23%;
-
   margin: 2rem auto;
->>>>>>> 164fde67605146c2aba679313c001bed798bda06
 }
 
 /* Tablet Size */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-<<<<<<< HEAD
+
     body {
         background-color: purple;
     }
@@ -163,7 +159,7 @@ header a {
         flex: 0 0 45%;
         margin: 1rem auto;
     }
-=======
+
   body {
     background-color: green;
   }
@@ -174,12 +170,11 @@ header a {
     /* width: 45%s; */
     margin: 1rem auto;
   }
->>>>>>> 164fde67605146c2aba679313c001bed798bda06
+
 }
 
 /* Mobile Phone Size */
 @media screen and (max-width: 768px) {
-<<<<<<< HEAD
     body {
         background-color: blue;
     }
@@ -224,7 +219,6 @@ header a {
 }
 
 /*  */
-=======
   body {
     background-color: blue;
   }
@@ -267,5 +261,3 @@ header a {
     flex: 1 1 100%;
     margin: 1rem auto;
   }
-}
->>>>>>> 164fde67605146c2aba679313c001bed798bda06

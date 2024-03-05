@@ -127,17 +127,13 @@ nav a.active {
 /* DEFAULT GALLERY STYLES */
 
 .container {
-<<<<<<< HEAD
     width: 900px;
     margin: 0 auto;
     margin-top: 100px;
     font-size: 0;
-=======
-  width: 900px;
-  margin: 0 auto;
-  margin-top: 100px;
-  font-size: 0;
->>>>>>> a58978acdec4faf74e4d2afaaabc6ac76f88706d
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
 }
 
 .polaroid {
@@ -163,7 +159,6 @@ nav a.active {
     text-align: center;
 }
 
-<<<<<<< HEAD
 /* transforms and transitions */
 .scaleUp {
   transform: scale(1.2)

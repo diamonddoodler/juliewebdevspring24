@@ -1,7 +1,13 @@
 /* Global styles */
 * {
     box-sizing: border-box;
-    background-color: black;
+    align-content: center;
+}
+
+html {
+    background: url('./purple\ gradient.jpg');
+    background-size: cover;
+    /*background-color:rgba(40, 0, 50, 1)*/
 }
 
 body {
@@ -10,7 +16,13 @@ body {
     color: white;
 }
 
-h1 {
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+h1, a {
     align-content: center;
     color: white;
 }
@@ -20,12 +32,81 @@ img {
     height: auto;
 }
 
+/* Nav bar */
+ul {
+    /* this inline is imporant! */
+    display: inline;
+    align-self: center;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style-type: none;
+    box-shadow: 0, 0, 5px rgba(0, 0, 0, 0.15);
+  }
+
+  ul li {
+    font: bold 12px/18px sans-serif;
+    display: inline-block;
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(100, 0, 100, 0.4);
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 15px;
+  }
+
+  ul li:hover {
+    background-color: rgba(120, 0, 120, 0.8);
+    color: #fff;
+  }
+
+  ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 150px;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+  }
+
+  ul li ul li {
+    background: rgba(100, 0, 100, 0.3);
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+  }
+
+  ul li ul li:hover {
+    background: rgba(100, 0, 100, 0.1);
+    transform: scale(1.2); /* I wanted to enlarge the tabs when hovered on */
+    z-index: 10;
+  }
+
+  ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* Jumbotron */
+div.hero {
+    width: 90vw;
+    border-radius: 20px;
+    max-height: 90vh;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
 /* Flexbox Simple Rows and Columns */
 .container {
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     /* extra styles so we can see our divs */
     border: 1px;
@@ -34,9 +115,100 @@ img {
     min-height: 400px;
 }
 
-.item {
-    border: 1px solid black;
-    background-color: rgba(100,0,100,0.5);
-    width: 23%;
-    height: 300px;
+.hero article {
+    position: absolute;
+    border-radius: 20px;
+    bottom: 10%;
+    right: 0;
+    width: 50%;
+    padding: 2%;
+    background: linear-gradient(90deg,
+                                rgba(100,0,110,0.5) 0%,
+                                rgba(100,0,100,0.1) 100%);
+    /* can use CSS gradient picker */
+ }
+
+ button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: rgba(100,0,100,0.1);
+    color: white;
+    text-transform: uppercase; /* caps lock */
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgba(150, 0, 150, 0.5);
+    cursor: pointer;
+  }
+
+.thumb {
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+    margin: 24px auto;
+    border-radius: 20px;
+}
+
+.thumb img {
+  transform: scale(1);
+  transform: rotate(0deg);
+  transition: all 1s ease;
+}
+
+.thumb:hover img{
+  transform: scale(1.5) rotate(-20deg);
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(50,0,60,0.6);
+  transition: all 1s ease-in-out;
+}
+
+.mask h2 {
+  margin: 0;
+}
+
+.mask p {
+  font-style: italic;
+}
+
+.thumb:hover .mask {
+  opacity: 1;
+}
+
+.thumb .mask h2, .thumb .mask p, .thumb .mask a {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s ease-out;
+}
+
+.thumb:hover .mask h2, .thumb:hover .mask p, .thumb:hover .mask a {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Phone */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 12px;
+  }
+
+  .hero article {
+      width: 100%;
+      padding: 1rem;
+      bottom: 0;
+  }
 }
