@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>JS Data Types</title>
+        <style type="text/css">
+
+        </style>
+
+        <script type="text/javascript">
+            //declare a variable
+            var myVar
+            //assigning a value to a variable
+            myVar = "number"
+            //declare and assign a value in one line
+            var otherVar = 24
+            //reassign values at any time, AND new type of value
+            otherVar = "twenty four"
+
+            console.log(myVar)
+            console.log(typeof myVar)
+
+            var x = 15
+            var y = "3"
+            var z = "three"
+
+            console.log(x + y)
+            console.log(x * y)
+            console.log(x * z)
+
+            //variables and string mixed
+            var temp = 52
+            var message = "Today's temperature is " + temp + " degrees."
+            console.log(message)
+
+            //functions parameters and onclick tribute
+            function sumValues(a, b) {
+                //variables declared inside {} live and die inside; this is called scope
+                var sum = a + b
+                alert(sum) //makes a popup on your browser
+            }
+            //call a function inside your code
+            sumValues(123, 456)
+            //console.log(sum) here wouldn't work because sum is only defined within the function
+
+            //booleans and onditionals
+            var isOn = true
+            //toggle between on and off
+            function switchOnOff() {
+                if (isOn == true) {
+                    alert("isOn is currently true, switching to false")
+                    isOn = false
+                } else {
+                    alert("isOn is currently false, switching to true")
+                    isOn = true
+                }
+            }
+
+            //loops and increments
+            //i++ is shorthand for i = i + 1
+            //i-- is shorthand for i = i - 1
+            //i+=5 is i = i + 5
+
+            //Beware of infinite loops; your condition must evaluate to false eventually
+            function countToN(n) {
+                //for loop
+                for (var i=0; i<=n; i++) {
+                    console.log(i)
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="switchOnOff()">Switch On/Off</button>
+        <button onclick="countToN(45)">Count to 45</button>
+    </body>
+</html>
