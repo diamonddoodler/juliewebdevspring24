@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event Listeners and Delegation</title>
+    <style type="text/css">
+      img {
+        display: block;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .active {
+        color: red;
+        text-shadow: 2,2,2,2 darkred;
+      }
+
+    </style>
+    <script type="text/javascript">
+    //make our hide button globally available as a var
+      var hidebutton
+      //wait for the DOM to be loaded before executing certain lines of code
+      //DOMContentLoaded is where we put all of the code we want to fire once the page has finished loading
+      document.addEventListener('DOMContentLoaded', function() { //anonymous function; we call a function here and it happens and we never need to call it anywhere else so it doesn't need a name
+        console.log('locked and loaded.')
+ 
+        //this is usually where we assign elements to variables or where we add event listeners
+        document.getElementById('hideButton').addEventListener('click', toggleVisible)
+        document.getElementById('eventH1').addEventListener('mouseover', function(event) {
+          //peep the event object that was passed in to our anonymous callback function
+          console.log(event.target)
+          //store the event target (aka the one the event just happened to)
+          var el = event.target
+          el.classList.toggle('active')
+        })
+      })
+
+      function toggleVisible() {
+        var peep = document.getElementById('pbj')
+        peep.classList.toggle('hidden')
+
+        if (peep.classList.contains('hidden')) {
+          hideButton.innerHTML = 'Show'
+        } else {
+          hideButton.innerHTML = "Hide"
+        }
+      }
+
+    </script>
+  </head>
+
+
+  <body>
+    <h1 id="eventH1">This h1 is here to be moused over so we can see that event object.</h1>
+    <button id="hideButton">Hide</button>
+    <br/>
+    <img id="pbj" src="./pbj.png">
+  </body>
+</html>

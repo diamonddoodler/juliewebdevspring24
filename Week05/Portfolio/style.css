@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     align-content: center;
+    text-align: center;
 }
 
 html {
@@ -22,25 +23,26 @@ img {
     border-radius: 20px;
 }
 
-h1, a {
-    align-content: center;
-    color: white;
+.center {
+  padding: 50px 0;
+  text-align: center;
 }
 
-img {
-    width: 100%;
-    height: auto;
+a {
+  font-size: 18px;
+  color: white;
 }
 
 /* Nav bar */
 ul {
     /* this inline is imporant! */
-    display: inline;
-    align-self: center;
+    /* display: inline;
+    align-self: center; */
     margin: 0;
     padding: 15px 4px 17px 0;
     list-style-type: none;
     box-shadow: 0, 0, 5px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
   }
 
   ul li {
@@ -56,7 +58,9 @@ ul {
 
   ul li:hover {
     background-color: rgba(120, 0, 120, 0.8);
+    transform: scale(1.1);
     color: #fff;
+    z-index: 100000;
   }
 
   ul li ul {
@@ -70,18 +74,24 @@ ul {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s;
+    z-index: 100000;
+  }
+
+  .footer {
+    padding: 1px;
+    text-align: center;
   }
 
   ul li ul li {
-    background: rgba(100, 0, 100, 0.3);
+    background: rgba(100, 0, 100, 0.5);
     display: block;
     color: #fff;
     text-shadow: 0 -1px 0 #000;
   }
 
   ul li ul li:hover {
-    background: rgba(100, 0, 100, 0.1);
-    transform: scale(1.2); /* I wanted to enlarge the tabs when hovered on */
+    background: rgba(100, 0, 100, 0.7);
+    transform: scale(1.1); /* I wanted to enlarge the tabs when hovered on */
     z-index: 10;
   }
 
@@ -91,13 +101,102 @@ ul {
     visibility: visible;
   }
 
+/* Carousel container */
+.carousel-container {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  margin: 1rem;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: inline;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* Jumbotron */
 div.hero {
-    width: 90vw;
+    width: 100vw;
     border-radius: 20px;
-    max-height: 90vh;
+    max-height: 50vh;
     position: relative;
     margin-bottom: 1rem;
+    text-align: center;
+    align-content: center;
 }
 
 /* Flexbox Simple Rows and Columns */
@@ -112,14 +211,13 @@ div.hero {
     border: 1px;
     background-color: rgba(0,0,100,0.2);
     padding: 2rem;
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .hero article {
     position: absolute;
     border-radius: 20px;
     bottom: 10%;
-    right: 0;
     width: 50%;
     padding: 2%;
     background: linear-gradient(90deg,
@@ -203,6 +301,7 @@ div.hero {
 @media screen and (max-width: 768px) {
   .container {
       flex-direction: column;
+
       padding: 12px;
   }
 
@@ -210,5 +309,22 @@ div.hero {
       width: 100%;
       padding: 1rem;
       bottom: 0;
+  }
+
+  .thumb {
+    width: auto;
+  }
+
+  .mask {
+    opacity: 1;
+  }
+
+  .thumb .mask h2, .thumb .mask p, .thumb .mask a {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .thumb img, .thumb:hover .mask h2, .thumb:hover .mask p, .thumb:hover .mask a {
+    transition: none;
+    transform: sclae(1);
   }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dynamic DOM, 2 ways</title>
+    <style type="text/css">
+      #content {
+        color: red;
+      }
+
+      @media screen and (max-width: 767px) {
+        #content {
+          color: blue;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <button onclick="addSingleP()">Add a single paragraph using strings</button>
+    <button onclick="addMultP(9)">Add multiple paragraphs the right way using DOM nodes</button>
+    <div id="content">
+      <p>This is some dummy text that will be overwritten by innerHTML.</p>
+    </div>
+
+    <script type="text/javascript">
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
