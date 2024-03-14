@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contact: The Julieverse</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="./me.jpg"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <h1>The Julieverse</h1>
+    <h3>Fill out the contact form below to send me a message :)</h3>
+  </head>
+  <body>
+
+    <!--Desktop nav bar-->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./projects.html">Projects</a>
+          <ul>
+            <li><a href="./ux-projects.html">UX/UI Design</a></li>
+            <li>Web Development</li>
+            <li>Art</li>
+            <li>Music</li>
+          </ul>
+        </li>
+        <li><a href="./index.html">My Career</a></li>
+        <li><a href="./contact.html"><i>Contact Form</i></a></li>
+      </ul>
+    </nav>
+
+    <!--Mobile nav bar-->
+    <span class="mobile-menu">&#8801;</span>
+    <nav>
+      <ul class="menu">
+        <li><a href="./">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./">My Career</a></li>
+        <li><a href="./contact.html">Contact Form</a></li>
+      </ul>
+    </nav>
+
+    <form action="#" method="POST" name="sampleForm" target="_self">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="FirstName">First Name</label>
+        <input name="FirstName" type="text" required />
+        <br> <br>
+        <label for="LastName">Last Name</label>
+        <input name="LastName" type="text" required />
+        <br> <br>
+        <label for="Email">Email Address</label>
+        <input name="Email" type="text" required />
+        <br> <br>
+        <label for="PhoneNum">Phone Number</label>
+        <input name="PhoneNum" type="text" required />
+      </fieldset><br>
+
+      <fieldset>
+        <legend>General Info</legend>
+        <label for="How">How do you know me/how did you find me?</label>
+        <br>
+        <br />
+        <input type="checkbox" name="How" value="SW" /> School/Work
+        <br />
+        <input type="checkbox" name="How" value="SM" /> Social Media
+        <br />
+        <input type="checkbox" name="How" value="RFS" /> Referral from someone
+        <br />
+        <input type="checkbox" name="How" value="Other" /> Other
+      </fieldset><br>
+
+      <fieldset>
+        <legend>Subject</legend>
+        <label for="Sub">What is the subject of your message?</label>
+        <br><br>
+        <input type="radio" name="Sub" value="BI" /> Business inquiry
+        <br />
+        <input type="radio" name="Sub" value="PI" /> Project inquiry
+        <br />
+        <input type="radio" name="Sub" value="Pics" /> You want pictures of my dog
+        <br />
+        <input type="radio" name="Sub" value="JTC" /> Just to chat
+        <br />
+        <input type="radio" name="Sub" value="Other" /> Other
+      </fieldset> <br>
+
+      <fieldset>
+        <legend>Message</legend>
+        <label for="Msg">Please type your message here:</label>
+        <br><br>
+        <textarea name="Msg" cols="40" rows="5"></textarea>
+      </fieldset>
+
+      <p>Thank you for your message.  Click "SUBMIT" to send it.</p>
+      <button role="button">SUBMIT</button>
+    </form>
+
+    <div class="footer-container">
+      <footer>
+        <h3>Here's where you can find me!</h3>
+        <a href="https://www.instagram.com/juliebabulieofficial/"><strong>Instagram</strong></a>
+        <hr>
+        <a href="https://www.linkedin.com/in/juliehuang222/"><strong>LinkedIn</strong></a>
+        <hr>
+        <a href="https://www.facebook.com/bleh.bleh.96995238"><strong>Facebook</strong></a>
+      </footer>
+    </div>
+  </body>
+</html>
