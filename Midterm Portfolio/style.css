@@ -232,14 +232,6 @@ div .hero {
     z-index: 0;
 }
 
-.hero-img {
-  display: flex;
-  justify-content: baseline;
-  flex-direction: row;
-  width: 500px;
-  height: 600px;
-}
-
 /* Flexbox Simple Rows and Columns */
 .container {
     display: flex;

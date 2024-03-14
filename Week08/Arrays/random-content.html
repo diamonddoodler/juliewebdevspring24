@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Random Content</title>
+        <script type="text/javascript">
+            //make an array of img srcs to choose from at random when the page loads
+            var arrImg = [
+                "https://i.ytimg.com/vi/VaUPyuzNsGQ/hqdefault.jpg",
+                "https://s.yimg.com/ny/api/res/1.2/4buSEXNF4vwvfF1BlW494Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/pethelpful_915/bec71ee246b272051a482d85d3c13eaf",
+                "https://wallpapercave.com/wp/wp10477827.jpg"
+            ]
+
+            //make an arra of links that correspond to the images shown
+            var arrLinks = [
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVaUPyuzNsGQ&psig=AOvVaw0WBLQ4dW9u9mtPaCuHWFQm&ust=1710365638059000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjI4tPW74QDFQAAAAAdAAAAABAE", 
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yahoo.com%2Flifestyle%2Fpet-baby-goat-jumping-off-140546089.html&psig=AOvVaw3luTtJnXGETRxWrj1pWaet&ust=1710365513377000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDavMjW74QDFQAAAAAdAAAAABAD",
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Ffunny-goat-wallpapers&psig=AOvVaw3zqn0VAvnkXopD7Srnjtmx&ust=1710365533148000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCID2nMDW74QDFQAAAAAdAAAAABAE"
+            ]
+
+            //helper function for picking a random number in the range of our array
+            function randomIndex(max) {
+                return Math.floor(Math.random() * max)
+            }
+
+            //we can write our pick some random content function here, but we shouldn't try and call it until our DOM has loaded
+            function loadRandomImage() {
+                //pick a random index in the range of our array length
+                var index = randomIndex(arrImg.length)
+                //assigned our img and link elements as variables
+                var img = document.getElementById("goat")
+                var link = document.getElementById("dynLink")
+                //using dot notation, we can access and assign values to different attributes of our elements
+                img.src = arrImg[index]
+                link.href = arrLinks[index]
+            }
+
+            //bring it all together with an event listener
+            document.addEventListener("DOMContentLoaded", function() {
+                //assign elemetns to global variables here, add event listeners to different elements on the page, call any functions I want to fire when the page initially loads
+                loadRandomImage()
+            })
+
+        </script>
+    </head>
+    <body>
+        <a href="#" id="dynLink"><img src="" id="goat"/></a>
+    </body>
+</html>
