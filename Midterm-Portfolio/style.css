@@ -32,6 +32,7 @@ img {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .small-img {
@@ -282,6 +283,7 @@ div .hero {
     overflow: hidden;
     margin: 24px auto;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .thumb img {
@@ -298,6 +300,7 @@ div .hero {
 
 .mask {
   position: absolute;
+  width: auto;
   top: 0;
   bottom: 0;
   left: 0;
@@ -324,17 +327,26 @@ div .hero {
 
 .thumb:hover .mask {
   opacity: 1;
+  width: auto;
+  overflow: hidden;
 }
 
 .thumb .mask h2, .thumb .mask p, .thumb .mask a {
   opacity: 0;
   transform: scale(0);
   transition: all 1s ease-out;
+  overflow: hidden;
 }
 
 .thumb:hover .mask h2, .thumb:hover .mask p, .thumb:hover .mask a {
   opacity: 1;
   transform: scale(1);
+  overflow: hidden;
+}
+
+/* Contact page */
+form {
+  display: inline;
 }
 
 /* Phone */
@@ -377,16 +389,13 @@ div .hero {
     width: auto;
   }
 
-  .mask {
-    opacity: 1;
+  .mask, .mask h2, .mask p, .nask a, .thumb:hover, .thumb .mask h2, .thumb .mask p, .thumb .mask a, .thumb:hover img, .thumb:hover .mask {
+    display: none;
+    transform: none;
   }
 
-  .thumb .mask h2, .thumb .mask p, .thumb .mask a {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .thumb img, .thumb:hover .mask h2, .thumb:hover .mask p, .thumb:hover .mask a {
-    transition: none;
-    transform: scale(1);
+  /* Contact page */
+  fieldset {
+    display: block;
   }
 }
