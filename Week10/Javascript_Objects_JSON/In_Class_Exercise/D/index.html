@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Objects and JSON</title>
+    <script type="text/javascript">
+      // initialize a new object and store it as a variable named customer
+      const customer = {
+        name: 'Tony',
+        age: 23,
+        married: false,
+        pets: ['dog', 'cat', 'iguana'],
+        siblings: [
+          {name: 'Mary', age: 32, married: true},
+          {name: 'Billy', age: 16, married: false},
+        ],
+      }
+
+      //sometimes we need to convert a JS object we built into JSON for sharing; use JSON.stringify()
+      const customerJSON = JSON.stringify(customer)
+      console.log(customerJSON)
+
+      //sometimes we receive some JSON and need to make it into an object
+      const customerObject = JSON.parse(customerJSON)
+      console.log(customerObject)
+
+      //another method for converting JSON into JS Objects
+      const anotherObject = customerJSON.json()
+      console.log(anotherObject)
+
+      // Change Tony's Name
+      console.log(customer.name) //Tony
+      customer.name = "Anthony"
+      console.log(customer.name) //Anthony
+      // add a new property defining the customers eyeColor
+      customer.eyeColor = 'green'
+      console.log(customer)
+      // add the pets and siblings properties to both Mary and Billy
+      customer.siblings[0].pets = ["snail", "spider"]
+      // Add Anthony's location, be sure to include the fields: houseNumber, street name, town, city
+      customer.pets.push("chicken")
+      console.log(customer)
+
+      // Log the following:
+      // Mary's marrital status
+      console.log(customer.siblings[0].married)
+      // Tony's age
+      console.log(customer.age)
+      // All of Billy's pets
+      for (let i=0; i<customer.pets.length; i++) {
+        console.log(customer.pets[i])
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Fetching Data rom API Endpoint</title>
+        <script type="text/javascript">
+            function randNumRange(min, max) {
+                var rn = Math.round(Math.random() * (max-min) + min)
+            }
+            const randomIndex = randNumRange(0 - 110)
+
+            //using JS fetch API
+            //https:///developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+            //we need to flag this function as asynchronous whenever we use the await flag within the function
+            async function logApiResults() {
+                //think of await as a dear JS IOU a response, it isn't instant so don't move on
+                const response = await fetch(`https//rickandmortyapi.com/api/character/${randomIndex}`)
+                const result = await response.json()
+                const message = `${result.name} is a ${result.species} from ${result.origin.name}.`
+                console.log(result)
+                console.log(message)
+            }
+            logApiResults()
+
+            //Thursday teaser code
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

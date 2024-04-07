@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Chinese Zodiac</title>
+        <style type="text/css">
+            * {
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+                color: wheat;
+                background-color: darkred;
+            }
+
+            h1, h3 {
+                padding: 1rem;
+            }
+
+            .well {
+                border-radius: 10px;
+                background-color: darkgoldenrod;
+                min-height: 100px;
+                padding: 20px;
+            }
+
+            button {
+                width: 10%;
+                padding: 10px 0;
+                border: 2px solid darkgoldenrod;
+                border-radius: 10px;
+                cursor: pointer;
+                margin: 10px 0;
+                color: white;
+                background:red;
+            }
+
+            button:hover {
+                background-color: darkred;
+            }
+
+            input {
+                width: 30%;
+                border-radius: 10px;
+                padding: 1rem;
+                color: white;
+                background: none;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('button').addEventListener('click', calcZod)
+            })
+
+            const zodArr = ["RAT", "OX", "TIGER", "RABBIT", "DRAGON", "SNAKE", "HORSE", "GOAT", "MONKEY", "ROOSTER", "DOG", "PIG"]
+            const zodDesc = ["quick-witted, resourceful, versatile, kind",
+                            "diligent, dependable, strong, determined",
+                            "brave, confident, competitive, unpredictable",
+                            "quiet, elegant, kind, responsible",
+                            "confident, intelligent, enthusiastic",
+                            "enigmatic, intelligent, wise",
+                            "animated, active, energetic",
+                            "calm, gentle, sympathetic",
+                            "sharp, smart, curious",
+                            "observant, hardworking, courageous",
+                            "lovely, honest, prudent",
+                            "compassionate, generous, diligent"
+            ]
+
+            function calcZod(event) {
+                //stop the page from reloading and clearing our javascript environment and refreshing the page
+                event.preventDefault()
+                var result = document.getElementById('zodiac')
+                let year = document.getElementById('year').value
+
+                //take birth year, subtract 4, modulus by 12 to get a number between 0–11; use that (zodInt) to find the corresponding animal
+                let zodInt = (year - 4) % 12
+                let zodiac = zodArr[zodInt]
+
+                let desc = zodDesc[zodInt]
+
+                let p1 = document.createElement('P')
+                let p2 = document.createElement('P')
+
+                var t1 = document.createTextNode('Your zodiac is the ' + zodiac + '.')
+                var t2 = document.createTextNode('According to your zodiac, your characteristics are as follows:  ' + desc + '.')
+
+                p1.appendChild(t1)
+                p2.appendChild(t2)
+
+                result.appendChild(p1)
+                result.appendChild(p2)
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1>What is your Chinese zodiac?</h1>
+        <h3><i>Chinese zodiacs depend on the year you were born in. <br/> Each one symbolizes a different set of personal traits and fortunes. <br/> Discover yours today!</i></h3>
+        <form>
+            <label for="year">Enter your birth year:</label> <br/><br/>
+            <input type="number" class="input" name="year" id="year" min="12" max="3000" step="1" required placeholder="1999"/>
+            <br/><br/>
+            <button type="submit" id="button">Find my zodiac!</button>
+        </form>
+        <br/>
+        <div class="well" id="zodiac"></div>
+    </body>
+</html>

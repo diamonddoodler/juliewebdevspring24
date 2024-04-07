@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Input Simple</title>
+
+    <script>
+      //let's write a function that changes the color of the h1 based on user input in a form
+      //make sure we don't try to grab any DOM elements with JS unti lthe page has fully loaded
+      document.addEventListener("DOMContentLoaded", function(){
+        //assign HTML elements to variables, add event listeners to HTML elements
+        let myBtn = document.getElementById('changeBtn')
+
+        myBtn.addEventListener('click', function(){
+          //grab our user number input
+          let userN = document.getElementById('num')
+          //it's a string
+          console.log(typeof userN.value)
+          //but we don't have a string, let's parse it
+          let n = parseInt(userN.value)
+          console.log(typeof n)
+
+          //grab our h1 element and store it as a js variable
+          let h = document.getElementById('changeMe')
+
+          //rather than having a laundry list of conditional statements, let's use a switch statement
+          switch(n) {
+            case 0:
+              h.className = 'red'
+              break
+            case 1:
+              h.className = 'green'
+              break
+            case 2:
+              h.className = 'purple'
+              break
+            case 3:
+              h.className = "blue"
+              break
+            default:
+              
+          }
+        })
+      })
+    </script>
+
+    <style>
+      h1 {
+        text-transform: uppercase;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: green
+      }
+
+      .purple {
+        color: purple;
+      }
+
+      .blue {
+        color: rgba(0,0,200,0.9);
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1 id="changeMe">Get user input</h1>
+
+    <form>
+      <fieldset>
+        <legend>Pick a number between 0 and 3</legend>
+        <label for="num">0-3</label>
+        <input type="number" name="num" id="num" min="0" max="3" step="1" placeholder="1"/>
+        <button type="submit" id="changeBtn" class="btnClass">Click to change the color class of the h1</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
