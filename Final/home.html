@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="./style.css"/>
+        <title>Julie's Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="./purple gradient 3.webp"> <!--favicon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--icons-->
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+            const element = document.getElementById("socials");
+            element.scrollIntoView();
+        </script>
+
+        <!--Desktop nav-->
+        <div class="desktop-nav">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="#mycareer">My Career</a></li>
+                <li><a href="./contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <div class="bg html" style="height:40%">
+            <!--Text-->
+            <img src="me no bg.png" style="margin-top:0%;margin-left:50%;width:25%;height:25%" alt="Me!">
+
+            <div style="margin-left:20%;padding:1px 16px;height:600px;text-align:center;">
+                <img class="hlogo" src="./The_Julieverse.__1_-removebg-preview.png" alt="The Juliverse"/>
+                <p><b>Thank you for visiting. I'm Julie, someone with a multitude of interests. 
+                    <br/>Click through my site to see how they meld together!</b></p>
+                <br/><br/>
+                <!--About Me bar-->
+                <div class="homebar" style="padding:1px 16px;text-align:center;">
+                    <h2>About Me</h2>
+                    <p>Here's some quick information about me!  If you wish to leave me a message, <a href="./contact.html">contact me here</a>.</p>
+                    <br/>
+                    <button class="button"><span><a href="./resume.html">VIEW RESUME  </a></span></button>
+                    <button onclick="scrollIntoView()" class="button"><span>MY SOCIALS  </span></button>
+                    <button class="button"><span><a href="./projects.html">SEE MY WORK  </a></span></button>
+                    <br/> <br/>
+                    <div class="button" onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                        style="background-color:rgba(170, 144, 255, 0.3);width:200px;height:20px;padding:10px;border-radius:50px;margin-left:40%">
+                        My Email <span class="ribbon">HOVER</span></div>
+                        <script>
+                            function mOver(obj) {
+                            obj.innerHTML = "juliehuang222@yahoo.com"
+                            }
+
+                            function mOut(obj) {
+                            obj.innerHTML = "My Email"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="images">
+                    <img src="./me greenwich.jpg" alt="Me in West Village, NYC"/>
+                    <img src="me and milo.jpg" alt="Me and my dog"/>
+                    <img src="./me performing.jpg" alt="Me performing"/>
+                </div>
+                <br/>
+                <p style="margin-left: 35%">Currently I'm based in West Village in Manhattan, NYC. However, I live with my family
+                <br/>in NC over summers. I love making music and art and spending plenty of time with my dog.</p>
+                <br/>
+        </div>
+
+        <!-- JS
+        var number of stars
+        for loop from i=0 to i<var
+        create image element, set img.source = star image
+        make sure style is position ABSOLUTE
+        give random number within a range for TOP property and LEFT property; use template strings
+        -->
+
+        <footer>
+            <p>Find me!</p>
+            <a href="https://www.instagram.com/juliebabulieofficial/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/juliehuang222/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://www.pinterest.com/juliebabulie/" target="_blank" class="fa fa-pinterest"></a>
+            <a href="https://www.facebook.com/bleh.bleh.96995238/" target="_blank" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-yahoo"></a>
+        </footer>
+        <p id="socials"></p>
+    </body>
+</html>

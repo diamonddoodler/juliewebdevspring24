@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Styles */
+* {
+    color: white;
+    font-family: "Raleway";
+}
+
+body {
+    margin: 0;
+    /*background-image: linear-gradient(to bottom right, black, rgba(45, 10, 120, 0.9));*/
+    background-image: url(./purple\ gradient\ 3.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+.bg {
+  width: 100%;
+  background: linear-gradient(45deg, #1B003B, #9E4EFF, #1B003B, #6324FF);
+  background-size: 300% 300%;
+  animation: color 6s ease-in-out infinite;
+}
+
+.hlogo {
+  width: 55%;
+  height: 35%;
+  padding: 0;
+}
+
+.plogo {
+  width: 60%;
+  height: 20%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* Desktop nav bar */
+.desktop-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-image: url(./purple\ gradient\ 3.webp);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .desktop-nav li a {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 20px;
+    background-color: rgba(115, 0, 220, 0.6);
+    text-decoration: none;
+    border: 10px inset rgba(125, 2, 230, 0.2);
+  }
+  
+  .desktop-nav li a.active {
+    background-color: rgb(135, 12, 240);
+    color: white;
+  }
+  
+  .desktop-nav li a:hover:not(.active) {
+    background-color: rgba(138, 15, 248, 0.9);
+    transform: scale(1.1);
+  }
+
+/* Content */
+
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .images {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .bg .homebar {
+    background-color: rgba(0,0,0,0.3);
+    width: 100;
+    height: 45%;
+  }
+
+  button {
+    background-color:rgba(135, 12, 240, 0.5);
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgba(175, 101, 255, 0.5);
+    transform: scale(1.1);
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .ribbon {
+    width: 60px;
+    font-size: 14px;
+    padding: 4px;
+    position: absolute;
+    right: -25px;
+    top: -12px;
+    text-align: center;
+    border-radius: 25px;
+    transform: rotate(20deg);
+    background-color: red;
+    color: white;
+  }
+
+/* Project cards */
+
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color:rgba(153, 58, 236, 0.2);
+  width: 250px;
+  height: 380px;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(173, 78, 255, 0.4);
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+}
+
+.title {
+  padding: 1rem;
+  color: white;
+  font-size: 15px;
+}
+
+/* Footer */
+
+footer {
+  margin-left: 22%;
+  height: 120px;
+}
+
+.fa {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 40px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-instagram {
+  background: #ce2fff;
+  color: white;
+}
+
+.fa-linkedin {
+  background: rgb(54, 54, 176);
+  color: white;
+}
+
+.fa-pinterest {
+  background: #ec3a3a;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #7a27ff;
+  color: white;
+}
+
+/* Phone */
+
+@media screen and (max-width: 768px) {
+
+    .desktop-nav li a {
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 18px;
+        background-color: rgba(135, 12, 240, 0.6);
+        text-decoration: none;
+    }
+    
+    .bg {
+      animation: none;
+      height: 2800px;
+    }
+
+    .hlogo {
+      width: 75%;
+      height: 25%;
+    }
+
+    .plogo {
+      width: 75%;
+      height: 15%;
+    }
+
+    .images {
+      display: flex;
+      margin: 25%;
+      width: 150px;
+      height: 150px;
+    }
+
+    .ribbon {
+      display: none;
+    }
+
+    .resume {
+      width: 100%;
+      height: 60%;
+    }
+}
